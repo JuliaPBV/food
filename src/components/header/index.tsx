@@ -13,7 +13,7 @@ export function Header() {
 
         <View className="flex-row items-center justify-center gap-1">
           <Feather name="map-pin" size={14} color="#ff0000" />
-          <Text className="text-lg font-bold">Campo Grande</Text>
+          <Text className="text-lg font-bold">Presidente Altino</Text>
         </View>
       </View>
 
