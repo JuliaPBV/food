@@ -31,6 +31,7 @@ export function TrendingFoods() {
       data={foods}
       renderItem={({ item }) => <CardHorizontalFood food={item} />}
       horizontal={true}
+      contentContainerStyle={{ gap: 14 }}
     />
   );
 }
