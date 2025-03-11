@@ -1,7 +1,8 @@
-import { View, Text } from "react-native";
+import { FlatList } from "react-native";
 import { useState, useEffect } from "react";
+import { RestaurantItem } from "./horizontal";
 
-interface RestaurantsProps {
+export interface RestaurantsProps {
   id: string;
   name: string;
   image: string;
@@ -21,8 +22,12 @@ export default function Restaurants() {
   }, []);
 
   return (
-    <View>
-      <Text>TEST 123</Text>
-    </View>
+    <FlatList
+      data={restaurants}
+      renderItem={({ item }) => <RestaurantItem item={item} />}
+      horizontal={true}
+      contentContainerStyle={{ gap: 14, paddingLeft: 16, paddingRight: 16 }}
+      showsHorizontalScrollIndicator={false}
+    />
   );
 }
