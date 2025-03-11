@@ -1,9 +1,10 @@
-import { View, Pressable, Text, Image } from "react-native";
+import { Pressable, View, Text, Image } from "react-native";
+import { FoodProps } from "../";
 
-export function CardHorizontalFood() {
+export function CardHorizontalFood({ food }: { food: FoodProps }) {
   return (
     <Pressable>
-      <Text>ITEM</Text>
+      <Text>{food.name}</Text>
     </Pressable>
   );
 }
