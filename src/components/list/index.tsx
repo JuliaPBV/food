@@ -1,5 +1,6 @@
 import { View, Text } from "react-native";
 import { useState, useEffect } from "react";
+import { RestaurantItem } from "./item";
 
 export interface RestaurantsProps {
   id: string;
@@ -7,8 +8,8 @@ export interface RestaurantsProps {
   image: string;
 }
 
-export default function List() {
-  const [restaurants, setRestauants] = useState<RestaurantsProps[]>();
+export function RestaurantVerticalList() {
+  const [restaurants, setRestauants] = useState<RestaurantsProps[]>([]);
 
   useEffect(() => {
     async function getFoods() {
@@ -21,8 +22,10 @@ export default function List() {
   }, []);
 
   return (
-    <View>
-      <Text>TESTe</Text>
+    <View className="px-4 flex-1 w-full h-full mb-11 gap-4">
+      {restaurants.map((item) => (
+        <RestaurantItem item={item} key={item.id} />
+      ))}
     </View>
   );
 }

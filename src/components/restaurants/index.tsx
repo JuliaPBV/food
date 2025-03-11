@@ -8,7 +8,7 @@ export interface RestaurantsProps {
   image: string;
 }
 
-export default function Restaurants() {
+export function Restaurants() {
   const [restaurants, setRestauants] = useState<RestaurantsProps[]>();
 
   useEffect(() => {
