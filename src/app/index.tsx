@@ -35,11 +35,18 @@ export default function Index() {
 
       <Section
         name="Famosos no DevFood"
-        label="Veja todas"
+        label="Veja todos"
         action={() => console.log("Clicou no Famosos")}
         size="text-xl"
       />
       <Restaurants />
+
+      <Section
+        name="Restaurantes"
+        label="Veja todos"
+        action={() => console.log("Clicou no Restaurantes")}
+        size="text-xl"
+      />
     </ScrollView>
   );
 }
